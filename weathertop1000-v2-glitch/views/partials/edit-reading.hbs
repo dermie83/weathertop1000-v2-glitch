@@ -1,0 +1,51 @@
+<form class="box" action="/station/{{station._id}}/updatereading/{{reading._id}}" method="POST">
+  <label>Enter Reading Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input id="code" name="code" class="input" type="number" placeholder="Weather Code" value="{{reading.code}}" />
+      </div>
+      <div class="field">
+        <input
+          id="temperature"
+          name="temperature"
+          class="input"
+          type="double"
+          placeholder="Temp 000.00&#176 C"
+          value="{{reading.temperature}}"
+        />
+      </div>
+      <div class="field">
+        <input
+          id="windSpeed"
+          name="windSpeed"
+          class="input"
+          type="double"
+          placeholder="Speed 00.000 km/h"
+          value="{{reading.windSpeed}}"
+        />
+      </div>
+      <div class="field">
+        <input
+          id="windDirection"
+          name="windDirection"
+          class="input"
+          type="double"
+          placeholder="Direction 000.00&#176"
+          value="{{reading.windDirection}}"
+        />
+      </div>
+      <div class="field">
+        <input
+          id="pressure"
+          name="pressure"
+          class="input"
+          type="number"
+          placeholder="Pressure"
+          value="{{reading.pressure}}"
+        />
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Update Track</button>
+</form>

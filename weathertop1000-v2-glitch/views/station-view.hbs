@@ -1,0 +1,120 @@
+{{> menu}}
+
+<section class="section">
+  <header class="title">
+    Latest weather readings - {{station.name}} 
+  </header>
+   <div class="tile is-ancestor has-background-info-light">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <span class="icon-text has-text-info">
+        <span class="icon is-large fas fa-2x">
+          <i class="fa-solid fa-location-dot"></i>
+        </span>
+        </span>
+        
+        <p class="subtitle">
+        Lat: {{station.latitude}}<br>
+        Lon: {{station.longitude}}<br>
+        </p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <span class="icon-text has-text-dark">
+        <span class="icon is-large fas fa-2x">
+        <i class="fa-sharp fa-solid fa-calendar-days"></i>
+        </span>
+        </span>
+        <p class="title">Date</p><br>
+        <p class="subtitle">{{latestTimeStamp}}</p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <span class="icon-text has-text-grey">
+        <span class="icon is-large fas fa-2x">
+        <img src="{{latestCodeIcon}}">
+        </span>
+        </span>
+        <p class="title">Weather</p><br>
+        <p class="subtitle">{{latestCodeText}}</p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <a>
+          <span class="icon-text has-text-info">
+          <span class="icon is-large fas fa-2x">
+          <i class="fa-solid fa-temperature-high"></i>
+          </span>
+          </span>
+        </a>
+        <a>
+          <span class="icon-text has-text-info">
+          <span class="icon is-large fas fa-2x">
+             <i class="{{trendTemperatureToIcon}}"></i>
+          </span>
+          </span>
+        </a>
+        <p class="title">Temp</p><br>
+        <p class="subtitle">{{latestTemp}} C<br>
+           {{latestTempFahrenheit}} F<br>
+          Max: {{maxTemp}} C<br>
+          Min: {{minTemp}} C<br>
+        </p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <a>
+          <span class="icon-text has-text-dark">
+          <span class="icon is-large fas fa-2x">
+          <img src="https://cdn.glitch.global/0fa94a6d-c73c-4106-b4c8-60a78df7dea0/wind-beaufort-{{latestWindSpeedBFT}}.svg">
+          </span>
+          </span>
+        </a>
+        <a>
+          <span class="icon-text has-text-warning">
+          <span class="icon is-large fas fa-2x">
+           <i class="{{trendWindSpeedToIcon}}"></i>
+          </span>
+          </span>
+        </a>
+        <p class="title">Wind</p><br>
+        <p class="subtitle">
+          Direction: {{windDirectionText}}<br>
+          Feels like: {{WindChill}} C<br>
+          Max: {{maxWindSpeed}} km/h<br>
+          Min: {{minWindSpeed}} km/h<br>
+        </p>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <a>
+          <span class="icon-text has-text-dark">
+          <span class="icon is-large fas fa-2x">
+          <i class="fa-solid fa-gauge-simple-high"></i>
+          </span>
+          </span>
+        </a>
+        <a>
+          <span class="icon-text has-text-dark">
+          <span class="icon is-large fas fa-2x">
+          <i class="{{trendPressureToIcon}}"></i>
+          </span>
+          </span>
+        </a>
+        <p class="title">Pressure</p><br>
+        <p class="subtitle">{{latestPressure}} hPa<br>
+           Max: {{maxPressure}} hPa<br>
+           Min: {{minPressure}} hPa<br>
+        </p> 
+      </article>
+    </div>
+  </div>
+  
+  {{> list-readings}}
+  {{> add-reading}}
+</section>

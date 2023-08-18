@@ -1,0 +1,25 @@
+<section class="section">
+  <h1 class="title">Update Profile</h1>
+  <form action="/profile/update/{{user._id}}" method="POST">
+    <label class="label">Name</label>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter first name" value="{{user.firstName}}">
+        </div>
+        <div class="field">
+          <input class="input" type="text" placeholder="Enter last name" value="{{user.lastName}}">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Email</label> <input class="input" type="text" placeholder="Enter email" value="{{user.email}}">
+    </div>
+    <div class="field">
+      <label class="label">Password</label> <input class="input" type="password" placeholder="Enter Password" value="{{user.password}}">
+    </div>
+    <div class="field is-grouped">
+      <button class="button is-link">Update</button>
+    </div>
+  </form>
+</section>

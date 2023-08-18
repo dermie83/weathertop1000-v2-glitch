@@ -1,0 +1,219 @@
+{
+  "file": "./models/readings.json",
+  "readings": [
+    {
+      "code": 100,
+      "temperature": 2,
+      "windSpeed": 23,
+      "pressure": 23,
+      "_id": "a020304d-5601-4786-ad6e-1a002de6c7e1",
+      "stationid": "9a64e17e-59d8-4042-848d-4cd11a57c35d"
+    },
+    {
+      "code": 200,
+      "temperature": 43,
+      "windSpeed": 123,
+      "pressure": 23,
+      "_id": "0edb6e4c-fb07-4e2d-956c-9fb156f2e9d1",
+      "stationid": "67528072-bf4f-4678-aa21-c063801ef9be"
+    },
+    {
+      "code": 200,
+      "temperature": 23,
+      "windSpeed": 4,
+      "pressure": 88,
+      "_id": "f4e24ad8-4066-448a-8c51-f5ab7aab7c17",
+      "stationid": "67528072-bf4f-4678-aa21-c063801ef9be"
+    },
+    {
+      "code": 300,
+      "temperature": 23,
+      "windSpeed": 24,
+      "pressure": 1001,
+      "_id": "3a959146-6d7e-476a-96df-572be92914ce",
+      "stationid": "67528072-bf4f-4678-aa21-c063801ef9be"
+    },
+    {
+      "code": 200,
+      "temperature": 12,
+      "windSpeed": 14,
+      "pressure": 1000,
+      "_id": "1bbea03d-95b1-404f-b2df-19f91594b747",
+      "stationid": "9a64e17e-59d8-4042-848d-4cd11a57c35d"
+    },
+    {
+      "code": 400,
+      "temperature": 34,
+      "windSpeed": 56,
+      "pressure": 1001,
+      "_id": "18427ee2-341d-48ed-985d-77e7693fe2d6",
+      "stationid": "9a64e17e-59d8-4042-848d-4cd11a57c35d"
+    },
+    {
+      "code": 1,
+      "temperature": 1,
+      "windSpeed": 1,
+      "pressure": 1,
+      "_id": "bc7c6125-1d01-4bd3-93f7-ec172619c7f7",
+      "stationid": "9a64e17e-59d8-4042-848d-4cd11a57c35d"
+    },
+    {
+      "code": 400,
+      "temperature": 12,
+      "windSpeed": 45,
+      "pressure": 1000,
+      "_id": "f538ecc1-7b61-466d-95d2-249ed68b1150",
+      "stationid": "67528072-bf4f-4678-aa21-c063801ef9be"
+    },
+    {
+      "code": 200,
+      "temperature": 23,
+      "windSpeed": 23,
+      "pressure": 1001,
+      "_id": "7e1b2da1-2598-45bd-b80c-c75a93385ddd",
+      "stationid": "f01a18d3-5f5d-42a9-834c-e0435ad8903d"
+    },
+    {
+      "code": 300,
+      "temperature": 30,
+      "windSpeed": 12,
+      "pressure": 999,
+      "_id": "b2e35633-a23a-46dc-b99e-e08eb3bc507b",
+      "stationid": "f01a18d3-5f5d-42a9-834c-e0435ad8903d"
+    },
+    {
+      "code": 400,
+      "temperature": 12,
+      "windSpeed": 34,
+      "pressure": 1002,
+      "_id": "f5d2c4e7-fe6c-4e87-8b27-fd648d745ec0",
+      "stationid": "f01a18d3-5f5d-42a9-834c-e0435ad8903d"
+    },
+    {
+      "code": 300,
+      "temperature": 12,
+      "windSpeed": 23,
+      "pressure": 1001,
+      "_id": "39951dd0-76c8-4ec0-9740-3ecc90d77963",
+      "stationid": "9af282a5-03b9-4156-92ed-353752b8a9f9"
+    },
+    {
+      "code": 200,
+      "temperature": 1,
+      "windSpeed": 12,
+      "pressure": 2000,
+      "_id": "3e5959cd-3a8b-41e4-a157-12d42aaf72f0",
+      "stationid": "9af282a5-03b9-4156-92ed-353752b8a9f9"
+    },
+    {
+      "code": 400,
+      "timeStamp": "11/08/2023, 18:07:55",
+      "temperature": 12,
+      "windSpeed": 23,
+      "windDirection": 46,
+      "pressure": 1001,
+      "_id": "dda195e7-0993-4769-9ee2-a2d2299588cb",
+      "stationid": "2fc938a5-acf9-4475-8c9a-493dfa28f1a6"
+    },
+    {
+      "code": 600,
+      "timeStamp": "17/08/2023, 14:40:34",
+      "temperature": 23.2,
+      "windSpeed": 7,
+      "windDirection": 23,
+      "pressure": 1001,
+      "_id": "108fa187-ce17-4423-af8c-541d944911e1",
+      "stationid": "30183296-9fe9-4d54-8639-53ba73cd8d9e"
+    },
+    {
+      "code": 300,
+      "timeStamp": "17/08/2023, 15:54:02",
+      "temperature": 3,
+      "windSpeed": 12,
+      "windDirection": 12,
+      "pressure": 1001,
+      "_id": "5e81312e-3158-422d-b711-ced4a0b9a06d",
+      "stationid": "b904522f-2c9e-4197-b012-e7b0e5007f32"
+    },
+    {
+      "code": 500,
+      "timeStamp": "17/08/2023, 17:18:08",
+      "temperature": 1,
+      "windSpeed": 2,
+      "windDirection": 3,
+      "pressure": 4,
+      "_id": "c3c11280-3bf3-435e-b7d4-a18811eb29a6",
+      "stationid": "4d6f5827-feb9-433c-a36d-277264580767"
+    },
+    {
+      "code": 500,
+      "timeStamp": "17/08/2023, 18:20:18",
+      "temperature": 12,
+      "windSpeed": 6,
+      "windDirection": 6,
+      "pressure": 6,
+      "_id": "79594991-285a-4ee5-8965-f56e9cd64d73",
+      "stationid": "19b88b9f-2e52-4507-91a7-da1264890ca9"
+    },
+    {
+      "code": 600,
+      "timeStamp": "17/08/2023, 18:39:20",
+      "temperature": 12,
+      "windSpeed": 3,
+      "windDirection": 345,
+      "pressure": 1000,
+      "_id": "5a0cbd68-e2d5-42fa-85ea-6d0aaeb38a7e",
+      "stationid": "f01a18d3-5f5d-42a9-834c-e0435ad8903d"
+    },
+    {
+      "code": 400,
+      "timeStamp": "18/08/2023, 16:44:53",
+      "temperature": 4,
+      "windSpeed": 4,
+      "windDirection": 4,
+      "pressure": 4,
+      "_id": "24b69be4-d9a8-4ada-9153-a598a4aae16c",
+      "stationid": "fc03bb23-ac6c-49ba-bd01-2fe6b1bf63ab"
+    },
+    {
+      "code": 200,
+      "timeStamp": "18/08/2023, 16:45:01",
+      "temperature": 2,
+      "windSpeed": 2,
+      "windDirection": 2,
+      "pressure": 2,
+      "_id": "70bfbd47-d5c1-47bc-92ae-5e16ca0ce30e",
+      "stationid": "fc03bb23-ac6c-49ba-bd01-2fe6b1bf63ab"
+    },
+    {
+      "code": 300,
+      "timeStamp": "18/08/2023, 16:45:13",
+      "temperature": 3,
+      "windSpeed": 3,
+      "windDirection": 3,
+      "pressure": 3,
+      "_id": "20adc5cf-865b-412f-a715-ec295e3995ce",
+      "stationid": "fc03bb23-ac6c-49ba-bd01-2fe6b1bf63ab"
+    },
+    {
+      "code": 400,
+      "timeStamp": "18/08/2023, 17:35:53",
+      "temperature": 1,
+      "windSpeed": 4,
+      "windDirection": 4,
+      "pressure": 4,
+      "_id": "0e668016-2f7a-404c-bb54-0e62746bf859",
+      "stationid": "dc299074-5352-4b65-a778-7b415496046e"
+    },
+    {
+      "code": 600,
+      "timeStamp": "18/08/2023, 19:00:36",
+      "temperature": 2,
+      "windSpeed": 2,
+      "windDirection": 2,
+      "pressure": 2,
+      "_id": "79c2fc88-e1ad-4c52-be11-7fca6b293a96",
+      "stationid": "b4ecaa06-73f9-4a06-95a2-3a30e3a3c871"
+    }
+  ]
+}

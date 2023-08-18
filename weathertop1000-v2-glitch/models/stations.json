@@ -1,0 +1,110 @@
+{
+  "file": "./models/stations.json",
+  "stations": [
+    {
+      "name": "Susan",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "7062e5ec-2201-411f-8acd-5a5645f71762",
+      "_id": "1e280e60-d870-4cf0-b167-a84c6979b9ec"
+    },
+    {
+      "name": "Dermot",
+      "latitude": "5",
+      "longitude": "5",
+      "userid": "7062e5ec-2201-411f-8acd-5a5645f71762",
+      "_id": "e8d3b481-b118-4694-b4c4-9b9ce2e9faae"
+    },
+    {
+      "name": "Dermo",
+      "latitude": "1.111",
+      "longitude": "12.11111",
+      "userid": "3fe11df7-0a3f-412a-b831-fb2f9caba517",
+      "_id": "9790e2bd-8606-4a8c-be47-d8fcd93e8bcc"
+    },
+    {
+      "name": "Dermo",
+      "latitude": "1.12112",
+      "longitude": "12.12112",
+      "userid": "3fe11df7-0a3f-412a-b831-fb2f9caba517",
+      "_id": "a0375fad-9523-4eb0-a9f4-1df55812f455"
+    },
+    {
+      "name": "Derm",
+      "latitude": "12",
+      "longitude": "12",
+      "userid": "3fe11df7-0a3f-412a-b831-fb2f9caba517",
+      "_id": "fb8ceb63-1082-413b-a690-32e487ffe196"
+    },
+    {
+      "name": "Susan",
+      "latitude": "1",
+      "longitude": "2",
+      "userid": "3fe11df7-0a3f-412a-b831-fb2f9caba517",
+      "_id": "36d73255-9697-4379-9938-5c7416c3de2f"
+    },
+    {
+      "name": "Bella",
+      "latitude": "12",
+      "longitude": "12",
+      "userid": "3fe11df7-0a3f-412a-b831-fb2f9caba517",
+      "_id": "dd859200-ac30-4576-9841-6a33b9d71706"
+    },
+    {
+      "name": "Marge",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
+      "_id": "3876deff-f90e-42e4-aeb5-429a073b7cca"
+    },
+    {
+      "name": "DDerm",
+      "latitude": "3",
+      "longitude": "3",
+      "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
+      "_id": "acb1d2c6-88ce-4d9a-b2a2-b592b4fb6d66"
+    },
+    {
+      "name": "Kerion",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
+      "_id": "f59ea941-7520-4060-8db7-7136b94d0e43"
+    },
+    {
+      "name": "Susan",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
+      "_id": "eaf457c3-0292-4ccd-9727-becac89ae9b3"
+    },
+    {
+      "name": "Susan",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
+      "_id": "0a883ad3-9c30-4ff8-85d1-c718e4f7d169"
+    },
+    {
+      "name": "Tramore",
+      "latitude": "52.123",
+      "longitude": "-7.123",
+      "userid": "4a94b582-b98f-48b3-ac52-8b8d75207109",
+      "_id": "fc03bb23-ac6c-49ba-bd01-2fe6b1bf63ab"
+    },
+    {
+      "name": "Bella",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
+      "_id": "dc299074-5352-4b65-a778-7b415496046e"
+    },
+    {
+      "name": "Dermo",
+      "latitude": "1",
+      "longitude": "1",
+      "userid": "4a94b582-b98f-48b3-ac52-8b8d75207109",
+      "_id": "b4ecaa06-73f9-4a06-95a2-3a30e3a3c871"
+    }
+  ]
+}
