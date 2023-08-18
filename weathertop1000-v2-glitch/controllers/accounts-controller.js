@@ -51,31 +51,31 @@ export const accountsController = {
     console.log("getLoggedInUser " + userEmail);
     return await userStore.getUserByEmail(userEmail);
   },
+
+  async updateUser(request, response) {
+
+    let loggedInUser = await accountsController.getLoggedInUser(request);
+    let updateUser = {
+      firstName: request.body.firstName,
+      lastName: request.body.lastName,
+      password: request.body.password,
+      email: request.body.email,
+    };
+
+    await userStore.updateUser(loggedInUser._id, updateUser);
+    response.redirect("/dashboard");
+  },
+
+  async profile(request, response) {
+     const loggedInUser = await accountsController.getLoggedInUser(request);
+
+    const viewData = {
+      title: "User Profile",
+      user: loggedInUser,
+      //UserLoggedIn: loggedInUser,
+    };
+    console.log("Rendering: Profile-View");
+
+    response.render("updateprofile-view", viewData);
+  },
 };
-
-//   async updateUser(request, response) {
-
-//     let loggedInUser = await accountsController.getLoggedInUser(request);
-//     let updateUser = {
-//       firstName: request.body.firstName,
-//       lastName: request.body.lastName,
-//       password: request.body.password,
-//       email: request.body.email,
-//     };
-
-//     await userStore.updateUser(loggedInUser._id, updateUser);
-//     response.redirect("/profile");
-//   },
-
-//   async profile(request, response) {
-//      const loggedInUser = await accountsController.getLoggedInUser(request);
-
-//     const viewData = {
-//       title: "User Profile",
-//       user: loggedInUser,
-//       //UserLoggedIn: loggedInUser,
-//     };
-//     console.log("Rendering: Profile-View");
-
-//     response.render("updateprofile-view", viewData);
-//   },

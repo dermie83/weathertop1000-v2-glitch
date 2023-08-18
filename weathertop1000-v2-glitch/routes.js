@@ -13,8 +13,8 @@ router.get("/signup", accountsController.signup);
 router.get("/logout", accountsController.logout);
 router.post("/register", accountsController.register);
 router.post("/authenticate", accountsController.authenticate);
-//router.get("/profile", accountsController.profile);
-//router.post("/profile/update/:_id", accountsController.updateUser);
+router.get("/profile", accountsController.profile);
+router.post("/profile/update/:_id", accountsController.updateUser);
 
 
 router.get("/dashboard", dashboardController.index);

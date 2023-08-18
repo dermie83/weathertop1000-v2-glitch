@@ -42,7 +42,7 @@ export const dashboardController = {
     };
     console.log(`adding station ${newStation.name}`);
     const station = await stationStore.addStation(newStation);
-    console.log("test1");
+    //console.log("test1");
     response.redirect("/dashboard");
   },
 
