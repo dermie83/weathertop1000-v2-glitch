@@ -44,6 +44,14 @@ added signup, login submit forms and views along with new index page
 
 version 0.1.7
 Added edit button to station-view
+Release 2 completed
+
+version 0.1.8
+Switched project over to VSCode IDE platform instead of Glitch
+New repository is now dermie83/weathertop1000-v2-glitch
+Added user profile edit view and methods new methods in accountsControll and userStore
+Release 3 completed
+
 
 
 
