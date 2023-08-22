@@ -4,6 +4,7 @@ import { aboutController } from "./controllers/about-controller.js";
 import { stationController } from "./controllers/station-controller.js";
 import { accountsController } from "./controllers/accounts-controller.js";
 import { readingController } from "./controllers/reading-controller.js";
+import { apiController } from "./controllers/api-controller.js";
 
 export const router = express.Router();
 
@@ -16,6 +17,8 @@ router.post("/authenticate", accountsController.authenticate);
 router.get("/profile", accountsController.profile);
 router.post("/profile/update/:_id", accountsController.updateUser);
 
+router.get("/api", apiController.index);
+router.post("/api/addreport", apiController.addreport);
 
 router.get("/dashboard", dashboardController.index);
 router.get("/about", aboutController.index);

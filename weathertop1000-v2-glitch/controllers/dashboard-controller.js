@@ -8,7 +8,6 @@ export const dashboardController = {
     console.log("loggedInUser " + loggedInUser._id);
     
     //If logged in user, render dashboard view
-    //const stations = await stationStore.getStationsByUserId(loggedInUser._id);
     let sortStations = await stationStore.getStationsByUserId(loggedInUser._id);
     sortStations.sort((a, b) => (a.name > b.name ? 1 : -1));
     
