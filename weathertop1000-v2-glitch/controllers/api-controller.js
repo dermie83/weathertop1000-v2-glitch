@@ -1,5 +1,3 @@
-//const oneCallRequest = `https://api.openweathermap.org/data/2.5/onecall?lat=52.160858&lon=-7.152420&units=metric&appid=77a354dbf26826603c06866a44c6d753`
-
 import axios from "axios";
 
 export const apiController = {
@@ -16,6 +14,7 @@ export const apiController = {
         let report = {};
         const lat = request.body.lat;
         const lng = request.body.lng;
+        
         const date = new Date(); // Add Current Date
         let dateTime = date.toLocaleString("en-GB", {
         year: "numeric",
@@ -30,12 +29,15 @@ export const apiController = {
         const result = await axios.get(requestUrl);
         if (result.status == 200) {
             const reading = result.data.current;
+            const timezone = result.data.timezone;
             report.code = reading.weather[0].id;
             report.temperature = reading.temp;
-            report.timeStamp = String(dateTime),
             report.windSpeed = reading.wind_speed;
             report.pressure = reading.pressure;
             report.windDirection = reading.wind_deg;
+            report.timeStamp = String(dateTime);
+            report.timezone = String(timezone);
+            
         };
         console.log(report);
         

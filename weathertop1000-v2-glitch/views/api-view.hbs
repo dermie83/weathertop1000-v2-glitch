@@ -2,8 +2,14 @@
 
 <section class="box has-text-centered">
   <h3 class="is-3 title">
-    Weather Readings From API Source
+    Weather Readings From OpenWeather API
   </h3>
+  <div class="section">
+    <h3 class="is-5 title">
+      Timezone/City
+    </h3>
+      {{reading.timezone}}
+  </div>
   <div class="section">
     {{> list-api-readings}}
   </div>
