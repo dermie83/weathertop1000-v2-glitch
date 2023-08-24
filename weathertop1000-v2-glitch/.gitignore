@@ -50,4 +50,4 @@ jspm_packages
 .yarn-integrity
 
 # api key
-requestUrl
+.config

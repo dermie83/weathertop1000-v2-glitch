@@ -2,7 +2,7 @@
 
 <section class="box has-text-centered">
   <h3 class="is-3 title">
-    Weather Readings From OpenWeather API
+    Latest Weather Reading From OpenWeather API
   </h3>
   <div class="section">
     <h3 class="is-5 title">
@@ -29,6 +29,35 @@
       </div>
       <div class="field is-grouped">
         <button class="button is-link">Create API Reading</button>
+      </div><br>
+      <div class="box" id="chart"></div>
+      <div>
+        <script>
+          const data = {
+            labels: [
+              {{#each reading.trendLabels}}
+                "{{this}}",
+              {{/each}}
+            ],
+            datasets: [
+              {
+                name: "Temperature", type: "line",
+                values: [
+                  {{#each reading.tempTrend}}
+                    {{this}},
+                  {{/each}}
+                ]
+              }
+            ]
+          }
+
+          const chart = new frappe.Chart("#chart", {
+            title: "Temperature Trend From API Reading",
+            data: data,
+            type: 'line',
+            height: 250,
+          })
+        </script>
       </div>
     </form>
   </section>

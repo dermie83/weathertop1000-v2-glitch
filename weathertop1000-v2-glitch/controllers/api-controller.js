@@ -1,4 +1,5 @@
 import axios from "axios";
+import { apiKey } from "../config.js";
 
 export const apiController = {
     async index(request, response) {
@@ -25,9 +26,10 @@ export const apiController = {
         second: "2-digit",
         hour12: false,
     });
-        let requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=77a354dbf26826603c06866a44c6d753`
+        let requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey.getapiKey()}`
         const result = await axios.get(requestUrl);
         if (result.status == 200) {
+            //console.log(result.data);
             const reading = result.data.current;
             const timezone = result.data.timezone;
             report.code = reading.weather[0].id;
@@ -37,6 +39,15 @@ export const apiController = {
             report.windDirection = reading.wind_deg;
             report.timeStamp = String(dateTime);
             report.timezone = String(timezone);
+
+            report.tempTrend = [];
+            report.trendLabels = [];
+            const trends = result.data.daily;
+            for (let i=0; i<trends.length; i++) {
+                report.tempTrend.push(trends[i].temp.day);
+                const date = new Date(trends[i].dt * 1000);
+                report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+            }
             
         };
         console.log(report);
