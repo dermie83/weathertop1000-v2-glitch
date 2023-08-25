@@ -19,6 +19,8 @@ router.post("/profile/update/:_id", accountsController.updateUser);
 
 router.get("/api", apiController.index);
 router.post("/api/addreport", apiController.addreport);
+//router.post("/api/addreport", apiController.addOpenWeatherStation);
+//router.post("/station/:id/addreading", stationController.addReading);
 
 router.get("/dashboard", dashboardController.index);
 router.get("/about", aboutController.index);

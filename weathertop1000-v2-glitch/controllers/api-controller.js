@@ -1,5 +1,9 @@
 import axios from "axios";
 import { apiKey } from "../config.js";
+import { stationStore } from "../models/station-store.js";
+import { accountsController } from "./accounts-controller.js";
+import { readingStore } from "../models/reading-store.js";
+import { readingConversions } from "../utils/reading-conversions.js";
 
 export const apiController = {
     async index(request, response) {
@@ -11,13 +15,15 @@ export const apiController = {
       },
     
     async addreport(request, response) {
+    
         console.log("rendering new api call");
         let report = {};
         const lat = request.body.lat;
         const lng = request.body.lng;
         
+        
         const date = new Date(); // Add Current Date
-        let dateTime = date.toLocaleString("en-GB", {
+        let dateTime = date.toLocaleString("en-uk", {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
@@ -32,7 +38,7 @@ export const apiController = {
             //console.log(result.data);
             const reading = result.data.current;
             const timezone = result.data.timezone;
-            report.code = reading.weather[0].id;
+            report.code = readingConversions.roundDownWeatherCode(reading.weather[0].id);
             report.temperature = reading.temp;
             report.windSpeed = reading.wind_speed;
             report.pressure = reading.pressure;
@@ -46,9 +52,25 @@ export const apiController = {
             for (let i=0; i<trends.length; i++) {
                 report.tempTrend.push(trends[i].temp.day);
                 const date = new Date(trends[i].dt * 1000);
-                report.trendLabels.push(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` );
+                report.trendLabels.push(`${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}` );
             }
             
+        };
+        // Add new openweather station and readings to user database
+        {
+            const loggedInUser = await accountsController.getLoggedInUser(request);
+            
+            const newOpenWeatherStation = {
+              name: result.data.timezone,
+              latitude: request.body.lat,
+              longitude: request.body.lng,
+              userid: loggedInUser._id,
+              
+            };
+            console.log(`adding openweatherstation ${newOpenWeatherStation.name}`);
+            const openstation = await stationStore.addStation(newOpenWeatherStation);
+            await readingStore.addReading(openstation._id, report);
+            console.log("test1");
         };
         console.log(report);
         
@@ -57,5 +79,7 @@ export const apiController = {
         reading : report
         };
         response.render("api-view", viewData);
+
     },
+
 };

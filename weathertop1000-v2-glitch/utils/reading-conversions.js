@@ -8,6 +8,11 @@ export const readingConversions = {
     const fahrenheitTemp =((celsius*9)/5)+32;
     return Math.round(fahrenheitTemp);
   },
+
+  roundDownWeatherCode(code){
+    const nearestHundred = Math.floor(code/100)*100;
+    return nearestHundred;
+  },
   
   convertWeatherCodeToText(latestWeatherCode) {
 
