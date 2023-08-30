@@ -51,3 +51,4 @@ jspm_packages
 
 # api key
 weathertop1000-v2-glitch/config.js
+weathertop1000-v2-glitch/views/partials/map.hbs
