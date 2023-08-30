@@ -8,6 +8,7 @@
     "start": "nodemon server.js -e js,hbs,mjs,cjs -ignore models/*.json"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
     "axios": "^1.4.0",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",

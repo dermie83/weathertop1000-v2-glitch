@@ -15,7 +15,7 @@ export const apiController = {
         response.render("api-view", viewData);
       },
     
-    async addreport(request, response) {
+    async generateReport(request, response) {
     
         console.log("rendering new api call");
         let report = {};
@@ -58,22 +58,22 @@ export const apiController = {
             
         };
         // Add new openweather station and readings to user database
-        {
-            const loggedInUser = await accountsController.getLoggedInUser(request);
+        // {
+        //     const loggedInUser = await accountsController.getLoggedInUser(request);
             
-            const newOpenWeatherStation = {
-              name: result.data.timezone,
-              latitude: request.body.lat,
-              longitude: request.body.lng,
-              userid: loggedInUser._id,
+        //     const newOpenWeatherStation = {
+        //       name: result.data.timezone,
+        //       latitude: request.body.lat,
+        //       longitude: request.body.lng,
+        //       userid: loggedInUser._id,
               
-            };
-            console.log(`adding openweatherstation ${newOpenWeatherStation.name}`);
-            const openstation = await stationStore.addStation(newOpenWeatherStation);
-            await readingStore.addReading(openstation._id, report);
-            console.log("test1");
-        };
-        console.log(report);
+        //     };
+        //     console.log(`adding openweatherstation ${newOpenWeatherStation.name}`);
+        //     const openstation = await stationStore.addStation(newOpenWeatherStation);
+        //     await readingStore.addReading(openstation._id, report);
+        //     console.log("test1");
+        // };
+        // console.log(report);
         
         const viewData = {
         title: "API Weather Report",
