@@ -33,7 +33,7 @@ export const apiController = {
         second: "2-digit",
         hour12: false,
     });
-        let requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey.getapiKey()}`
+        let requestUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey.getOpenWeatherapiKey()}`
         const result = await axios.get(requestUrl);
         if (result.status == 200) {
             //console.log(result.data);
