@@ -57,6 +57,7 @@ export const apiController = {
             }
             
         };
+        
         // Add new openweather station and readings to user database
         // {
         //     const loggedInUser = await accountsController.getLoggedInUser(request);
