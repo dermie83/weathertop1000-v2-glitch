@@ -37,6 +37,8 @@ export const apiController = {
         const result = await axios.get(requestUrl);
         if (result.status == 200) {
             //console.log(result.data);
+            const lat = result.data.lat;
+            const lng = result.data.lon;
             const reading = result.data.current;
             const timezone = result.data.timezone;
             report.code = readingConversions.roundDownWeatherCode(reading.weather[0].id);
@@ -59,29 +61,48 @@ export const apiController = {
         };
         
         // Add new openweather station and readings to user database
-        // {
-        //     const loggedInUser = await accountsController.getLoggedInUser(request);
+        {
+            const loggedInUser = await accountsController.getLoggedInUser(request);
             
-        //     const newOpenWeatherStation = {
-        //       name: result.data.timezone,
-        //       latitude: request.body.lat,
-        //       longitude: request.body.lng,
-        //       userid: loggedInUser._id,
+            const newOpenWeatherStation = {
+              name: result.data.timezone,
+              latitude: request.body.lat,
+              longitude: request.body.lng,
+              userid: loggedInUser._id,
               
-        //     };
-        //     console.log(`adding openweatherstation ${newOpenWeatherStation.name}`);
-        //     const openstation = await stationStore.addStation(newOpenWeatherStation);
-        //     await readingStore.addReading(openstation._id, report);
-        //     console.log("test1");
-        // };
-        // console.log(report);
+            };
+            console.log(`adding openweatherstation ${newOpenWeatherStation.name}`);
+            const openstation = await stationStore.addStation(newOpenWeatherStation);
+            await readingStore.addReading(openstation._id, report);
+            console.log("test1");
+        };
+        console.log(report);
         
         const viewData = {
         title: "API Weather Report",
-        reading : report
+        lat:lat,
+        lng:lng,
+        reading:report
         };
         response.render("api-view", viewData);
 
     },
+
+    async addOpenStation(request, response) {
+        const loggedInUser = await accountsController.getLoggedInUser(request);
+        const newOpenWeatherStation = {
+          name: request.body.name,
+          latitude: request.body.latitude,
+          longitude: request.body.longitude,
+          userid: loggedInUser._id,
+          
+        };
+        console.log(`adding station ${newOpenWeatherStation.name}`);
+        const openstation = await stationStore.addStation(newOpenWeatherStation);
+        await readingStore.addReading(openstation._id, this.report);
+        //     console.log("test1");
+        console.log("Open weather station added");
+        response.redirect("/dashboard");
+      },
 
 };

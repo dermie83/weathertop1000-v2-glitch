@@ -22,9 +22,9 @@ export const dashboardController = {
       stations: sortStations,
     };  
 
-    let viewDataString = JSON.stringify(viewData); // Debug Remove Later
-    let viewDateObject = JSON.parse(viewDataString); // Debug Remove Later
-    console.dir(viewDateObject, { depth: null, colors: true }); // Debug Remove Later
+    // let viewDataString = JSON.stringify(viewData); // Debug Remove Later
+    // let viewDateObject = JSON.parse(viewDataString); // Debug Remove Later
+    // console.dir(viewDateObject, { depth: null, colors: true }); // Debug Remove Later
 
     console.log("dashboard rendering 1");
     response.render("dashboard-view", viewData);

@@ -91,6 +91,13 @@
       "longitude": "-9.22222",
       "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
       "_id": "c7942151-7ae2-4b0f-8c0f-c4e8579175da"
+    },
+    {
+      "name": "Europe/Isle_of_Man",
+      "latitude": "53.222",
+      "longitude": "-5.333",
+      "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
+      "_id": "b93336fd-15a0-4fcb-ae6d-c88ac542a941"
     }
   ]
 }
