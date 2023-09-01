@@ -6,7 +6,19 @@ import { readingStore } from "../models/reading-store.js";
 import { readingConversions } from "../utils/reading-conversions.js";
 
 
+  /**
+   * This class handles API calls and generates new stations and readings
+   * and renders API page.
+   *
+   */
+
 export const apiController = {
+
+    /**
+     * The index method renders
+     * the viewData object on the api-view.
+     * 
+     */
     async index(request, response) {
         const viewData = {
           title: "API Weather Report",
@@ -15,6 +27,14 @@ export const apiController = {
         response.render("api-view", viewData);
       },
     
+      /**
+     * This method generates a new real time station with readings 
+     * using the the openweather applicationan API.
+     * A report object with readings is created upon a successful API request.
+     * The generated weather report is then automatically saved
+     * to the users station and reading stores database.
+     * 
+     */
     async generateReport(request, response) {
     
         console.log("rendering new api call");
@@ -87,22 +107,4 @@ export const apiController = {
         response.render("api-view", viewData);
 
     },
-
-    async addOpenStation(request, response) {
-        const loggedInUser = await accountsController.getLoggedInUser(request);
-        const newOpenWeatherStation = {
-          name: request.body.name,
-          latitude: request.body.latitude,
-          longitude: request.body.longitude,
-          userid: loggedInUser._id,
-          
-        };
-        console.log(`adding station ${newOpenWeatherStation.name}`);
-        const openstation = await stationStore.addStation(newOpenWeatherStation);
-        await readingStore.addReading(openstation._id, this.report);
-        //     console.log("test1");
-        console.log("Open weather station added");
-        response.redirect("/dashboard");
-      },
-
 };

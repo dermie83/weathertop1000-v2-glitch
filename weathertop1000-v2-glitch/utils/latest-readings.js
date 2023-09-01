@@ -2,7 +2,10 @@ import { readingStore } from "../models/reading-store.js";
 import { readingConversions } from "../utils/reading-conversions.js";
 import { stationAnalytics } from "../utils/station-analytics.js";
 
-
+/**
+ * This class handles things related to latest readings from the station
+ *
+ */
 export const latestReadings = async (id) => {
   let stationReadings = await readingStore.getReadingsByStationId(id);
   let latestReading = null;

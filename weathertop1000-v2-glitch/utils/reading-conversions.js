@@ -1,24 +1,37 @@
-// export const apiKey = {
-  
-//     getapiKey() {
-//     const apiKey = '';
-//       return apiKey;
-//     },
-// }
-
-
+/**
+ * This class handles things related to the reading conversions
+ *
+ */
 export const readingConversions = {
-  
+    
+   /**
+     * This method converts celsius temp to fahrenheit temp
+     * @param celsius
+     * 
+     *  @return rounded number
+     */
   convertTemp(celsius) {
     const fahrenheitTemp =((celsius*9)/5)+32;
     return Math.round(fahrenheitTemp);
   },
 
+   /**
+     * This method floors the weathercode number to the nearest hundreth
+     * @param code
+     * 
+     * @return integer
+     */
   roundDownWeatherCode(code){
     const nearestHundred = Math.floor(code/100)*100;
     return nearestHundred;
   },
   
+   /**
+     * This method converts the weathercode to a descriptive text
+     * @param latestWeatherCode
+     * 
+     * @return string
+     */
   convertWeatherCodeToText(latestWeatherCode) {
 
         switch (latestWeatherCode) {
@@ -44,6 +57,12 @@ export const readingConversions = {
 
     },
   
+    /**
+     * This method converts the weathercode to a svg icon
+     * @param latestWeatherCode
+     * 
+     * @return svg icon
+     */
   convertWeatherToIcon(latestWeatherCode) {
 
         switch (latestWeatherCode) {
@@ -69,6 +88,12 @@ export const readingConversions = {
 
     },
   
+    /**
+     * This method converts the windspeed range to an index integer
+     * @param windSpeed
+     * 
+     *  @return integer
+     */
   convertWindSpeedToBeaufortIndex(windSpeed) {
 
         if (windSpeed == 1)
@@ -125,6 +150,12 @@ export const readingConversions = {
         }
     },
   
+    /**
+     * This method converts the beaufort code index to descriptive text
+     * @param bftCode 
+     * 
+     *  @return string
+     */
   convertBFTCodeToText(bftCode) {
 
         switch (bftCode) {
@@ -157,11 +188,25 @@ export const readingConversions = {
         }
     },
   
+    /**
+     * This method calculates windchill
+     * Takes in 2 parameters
+     * @param latestTemp is the stations most recent temperature in celcius
+     * @param latestWindSpeed is the stations most recent windSpeed
+     * 
+     * @return rounded number
+     */
   calculateWindChill(latestTemp, latestWindSpeed){
         let windChill = 13.12 +0.6215*(latestTemp)-11.37*Math.pow(latestWindSpeed,0.16)+0.3965*(latestTemp*Math.pow(latestWindSpeed,0.16));
         return Math.round(windChill);
     },
   
+    /**
+     * This method converts winddirection number to compass text
+     * @param windDirection
+     * 
+     * @return string
+     */
    convertWindDirectionToText(windDirection) {
 
         if (((windDirection >= 0.0) && (windDirection <= 11.25))
@@ -236,6 +281,12 @@ export const readingConversions = {
 
     },
   
+    /**
+     * This method converts latest trend text to fontawasome icon
+     * @param latestTrend
+     * 
+     * @return fontawasome icon
+     */
   convertTrendToIcon(latestTrend)
     {
         if (latestTrend == "Increasing"){

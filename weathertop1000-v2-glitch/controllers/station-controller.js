@@ -3,7 +3,16 @@ import { readingStore } from "../models/reading-store.js";
 import { latestReadings } from "../utils/latest-readings.js";
 
 
+    /**
+     * This class renders the station readings page
+     * 
+     */
 export const stationController = {
+
+    /**
+     * The index method renders the station readings view
+     * 
+     */
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     
@@ -20,6 +29,12 @@ export const stationController = {
     response.render("station-view", viewData);
   },
   
+    /**
+     * This method creates a newReading object for a selected station.
+     * The newReading object takes in 6 parameters from the add-reading view.
+     * The addReading method in the readingStore adds the object to the database.
+     * 
+     */
   async addReading(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     const date = new Date(); // Add Current Date
@@ -46,6 +61,11 @@ export const stationController = {
     response.redirect("/station/" + station._id);
   },
   
+    /**
+     * This method allows the user to delete a reading from the readingStore database.
+     * The station is then rendered with a new reading list.
+     * 
+     */
   async deleteReading(request, response) {
     const stationId = request.params.stationid;
     const readingId = request.params.readingid;
