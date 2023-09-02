@@ -98,6 +98,13 @@
       "longitude": "-5.333",
       "userid": "13d52ed5-ce5f-4c90-b5d5-23bd4414caaf",
       "_id": "b93336fd-15a0-4fcb-ae6d-c88ac542a941"
+    },
+    {
+      "name": "Africa/Ouagadougou",
+      "latitude": "12.2222",
+      "longitude": "-2.222",
+      "userid": "4a94b582-b98f-48b3-ac52-8b8d75207109",
+      "_id": "3395e6f5-3b8a-4956-9671-48cc314091a2"
     }
   ]
 }
